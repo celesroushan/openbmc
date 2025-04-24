@@ -9,6 +9,7 @@
 #include <linux/version.h>
 #include "i2c_dev_sysfs.h"
 
+
 /*
  * NOTE: ONLY export register fields that are required from user space.
  */
