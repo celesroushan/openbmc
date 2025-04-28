@@ -4,7 +4,7 @@ on:
       tag:
         description: 'Tag'
         required: True
-name: Create QEMU release
+name: Create QEMU release1
 jobs:
   build_qemu_executable:
     name: Build QEMU
