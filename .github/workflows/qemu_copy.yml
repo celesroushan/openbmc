@@ -8,7 +8,7 @@ name: Create QEMU release1
 jobs:
   build_qemu_executable:
     name: Build QEMU
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout OpenBMC
         uses: actions/checkout@v3
@@ -22,7 +22,7 @@ jobs:
   create_release:
     name: Create release
     needs: [build_qemu_executable]
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
@@ -39,7 +39,7 @@ jobs:
   upload_qemu_executable:
     name: Upload QEMU binary to release assets
     needs: [build_qemu_executable, create_release]
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Download QEMU binary
         id: download
